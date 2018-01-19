@@ -1,6 +1,6 @@
 ﻿using Autofac;
 
-namespace Functified.Core.Services.Ioc
+namespace FunctifiedAutofac.Core.Services.Ioc
 {
     public interface IBootstrapper
     {

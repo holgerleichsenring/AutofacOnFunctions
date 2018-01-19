@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using Autofac;
-using Functified.Core.Services.Modules;
+using FunctifiedAutofac.Core.Services.Modules;
 
-namespace Functified.Core.Services.Ioc
+namespace FunctifiedAutofac.Core.Services.Ioc
 {
     public static class InjectConfiguration
     {

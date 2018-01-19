@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs.Host.Bindings;
 
-namespace Functified.Core.Services.Ioc
+namespace FunctifiedAutofac.Core.Services.Ioc
 {
     internal class InjectAttributeValueProvider : IValueProvider
     {

@@ -1,8 +1,8 @@
 ﻿using Autofac;
-using Functified.Core.Services.Ioc;
-using Functified.Sample.Services.Modules;
+using FunctifiedAutofac.Core.Services.Ioc;
+using FunctifiedAutofac.Sample.Services.Modules;
 
-namespace Functified.Sample.Bootstrap
+namespace FunctifiedAutofac.Sample.Bootstrap
 {
     public class Bootstrapper : IBootstrapper
     {

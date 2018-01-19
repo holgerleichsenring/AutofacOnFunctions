@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Autofac.Core;
 
-namespace Functified.Core.Services.Ioc
+namespace FunctifiedAutofac.Core.Services.Ioc
 {
     /// <summary>
     ///     Contract for releasing class instances.

@@ -1,7 +1,7 @@
 ﻿using Autofac;
-using Functified.Core.Services.Ioc;
+using FunctifiedAutofac.Core.Services.Ioc;
 
-namespace Functified.Core.Services.Modules
+namespace FunctifiedAutofac.Core.Services.Modules
 {
     public class CommonModule : Module
     {

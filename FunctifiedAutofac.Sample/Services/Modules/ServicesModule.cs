@@ -1,7 +1,7 @@
 ﻿using Autofac;
-using Functified.Sample.Services.Functions;
+using FunctifiedAutofac.Sample.Services.Functions;
 
-namespace Functified.Sample.Services.Modules
+namespace FunctifiedAutofac.Sample.Services.Modules
 {
     public class ServicesModule : Module
     {

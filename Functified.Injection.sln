@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Functified.Core", "Functified.Core\Functified.Core.csproj", "{94A477CA-FFCE-4AF4-B74E-C7C8F3E52B20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Functified.Sample", "Functified.Sample\Functified.Sample.csproj", "{DAD012B7-2270-425B-A2DC-839507460E8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94A477CA-FFCE-4AF4-B74E-C7C8F3E52B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94A477CA-FFCE-4AF4-B74E-C7C8F3E52B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94A477CA-FFCE-4AF4-B74E-C7C8F3E52B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94A477CA-FFCE-4AF4-B74E-C7C8F3E52B20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD012B7-2270-425B-A2DC-839507460E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD012B7-2270-425B-A2DC-839507460E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD012B7-2270-425B-A2DC-839507460E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD012B7-2270-425B-A2DC-839507460E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {622151CB-0951-4FBA-9150-8C7AFCCF12B2}
+	EndGlobalSection
+EndGlobal

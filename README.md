@@ -1,4 +1,4 @@
-# functified-autofac
+# Autofac On Functions
 Azure Function Autofac Integration
 
 For a comprehensive explanation have a look at [codingsoul](http://codingsoul.de/2018/01/19/azure-function-dependency-injection-with-autofac/)

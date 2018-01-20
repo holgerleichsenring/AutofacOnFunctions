@@ -1,7 +1,7 @@
 # functified-autofac
 Azure Function Autofac Integration
 
-For a comprehensive explanation have a look at [codingsoul](http://codingsoul.de/2018/01/19/azure-function-dependency-injection-with-autofac-functified-autofac/)
+For a comprehensive explanation have a look at [codingsoul](http://codingsoul.de/2018/01/19/azure-function-dependency-injection-with-autofac/)
 
 # Goal
 Azure functions are by design static. Allow for dependency injection within Azure function with Autofac. The extensible nature of Azure Functions allow for attribute based dependency injection implementation. The attribute is called "Inject". Just add it as a parameter to your function combined with the type and name of the service parameter.
@@ -11,7 +11,7 @@ Azure functions are by design static. Allow for dependency injection within Azur
 ```
 
 # How to
-Simple create a class based on the [IBootstrapper interface](FunctifiedAutofac.Sample/Bootstrap/Bootstrapper.cs).
+Simple create a class based on the [IBootstrapper interface](AutofacOnFunctions.Sample/Bootstrap/Bootstrapper.cs).
 You need to package your references into modules, obviously. Different strategies are not implemented by now.
 
 ```C#
@@ -21,7 +21,7 @@ You need to package your references into modules, obviously. Different strategie
     }
 ```
 
-Just visit the sample to check how easy it is to provide your modularized services in [Bootstrapper Sample](FunctifiedAutofac.Sample/Bootstrap/Bootstrapper.cs).
+Just visit the sample to check how easy it is to provide your modularized services in [Bootstrapper Sample](AutofacOnFunctions.Sample/Bootstrap/Bootstrapper.cs).
 
 ```C#
     public class Bootstrapper : IBootstrapper
@@ -36,7 +36,7 @@ Just visit the sample to check how easy it is to provide your modularized servic
     }
 ```
 
-The module(s) in question shall contain the services that are necessary for the functions in your project. A sample is provided in [ServicesModule](FunctifiedAutofac.Sample/Services/Modules/ServicesModule.cs) Sample.
+The module(s) in question shall contain the services that are necessary for the functions in your project. A sample is provided in [ServicesModule](AutofacOnFunctions.Sample/Services/Modules/ServicesModule.cs) Sample.
 
 ```C#
  public class ServicesModule : Module

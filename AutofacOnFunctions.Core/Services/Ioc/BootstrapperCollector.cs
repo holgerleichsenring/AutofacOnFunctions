@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FunctifiedAutofac.Core.Services.Ioc
+namespace AutofacOnFunctions.Core.Services.Ioc
 {
     internal class BootstrapperCollector
     {

@@ -2,12 +2,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using FunctifiedAutofac.Core.Services.Ioc;
+using AutofacOnFunctions.Core.Services.Ioc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Azure.WebJobs.Host;
 
-namespace FunctifiedAutofac.Sample.Services.Functions
+namespace AutofacOnFunctions.Sample.Services.Functions
 {
     public static class TestFunction1
     {

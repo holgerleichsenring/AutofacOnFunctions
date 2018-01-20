@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FunctifiedAutofac.Sample.Services.Functions
+namespace AutofacOnFunctions.Sample.Services.Functions
 {
     public class TestIt : ITestIt
     {

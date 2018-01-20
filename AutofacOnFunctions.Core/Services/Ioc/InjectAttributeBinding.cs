@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs.Host.Bindings;
 using Microsoft.Azure.WebJobs.Host.Protocols;
 
-namespace FunctifiedAutofac.Core.Services.Ioc
+namespace AutofacOnFunctions.Core.Services.Ioc
 {
     public class InjectAttributeBinding : IBinding
     {

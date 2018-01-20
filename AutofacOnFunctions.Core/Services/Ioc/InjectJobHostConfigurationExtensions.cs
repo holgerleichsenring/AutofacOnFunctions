@@ -3,7 +3,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Azure.WebJobs.Host.Config;
 
-namespace FunctifiedAutofac.Core.Services.Ioc
+namespace AutofacOnFunctions.Core.Services.Ioc
 {
     public static class InjectJobHostConfigurationExtensions
     {

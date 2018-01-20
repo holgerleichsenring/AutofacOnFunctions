@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctifiedAutofac.Core", "FunctifiedAutofac.Core\FunctifiedAutofac.Core.csproj", "{94A477CA-FFCE-4AF4-B74E-C7C8F3E52B20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacOnFunctions.Core", "AutofacOnFunctions.Core\AutofacOnFunctions.Core.csproj", "{94A477CA-FFCE-4AF4-B74E-C7C8F3E52B20}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctifiedAutofac.Sample", "FunctifiedAutofac.Sample\FunctifiedAutofac.Sample.csproj", "{DAD012B7-2270-425B-A2DC-839507460E8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacOnFunctions.Sample", "AutofacOnFunctions.Sample\AutofacOnFunctions.Sample.csproj", "{DAD012B7-2270-425B-A2DC-839507460E8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

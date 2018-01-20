@@ -9,7 +9,7 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.7" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FunctifiedAutofac.Core\FunctifiedAutofac.Core.csproj" />
+    <ProjectReference Include="..\AutofacOnFunctions.Core\AutofacOnFunctions.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />

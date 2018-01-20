@@ -1,7 +1,7 @@
 ﻿using System;
 using Autofac;
 
-namespace FunctifiedAutofac.Core.Services.Ioc
+namespace AutofacOnFunctions.Core.Services.Ioc
 {
     public class ServiceLocator
     {

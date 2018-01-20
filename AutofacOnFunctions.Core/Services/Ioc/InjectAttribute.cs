@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Azure.WebJobs.Description;
 
-namespace FunctifiedAutofac.Core.Services.Ioc
+namespace AutofacOnFunctions.Core.Services.Ioc
 {
     [AttributeUsage(AttributeTargets.Parameter)]
     [Binding]

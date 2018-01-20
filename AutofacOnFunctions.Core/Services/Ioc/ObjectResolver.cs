@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Autofac;
 using Autofac.Core;
 
-namespace FunctifiedAutofac.Core.Services.Ioc
+namespace AutofacOnFunctions.Core.Services.Ioc
 {
     public class ObjectResolver : IObjectResolver
     {

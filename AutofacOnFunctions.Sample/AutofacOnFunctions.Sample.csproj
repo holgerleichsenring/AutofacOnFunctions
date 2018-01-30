@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
-    <RootNamespace>FunctifiedAutofac.Sample</RootNamespace>
-    <AssemblyName>FunctifiedAutofac.Sample</AssemblyName>
+    <RootNamespace>AutofacOnFunctions.Sample</RootNamespace>
+    <AssemblyName>AutofacOnFunctions.Sample</AssemblyName>
   </PropertyGroup>
   <ItemGroup>    
     <PackageReference Include="Autofac" Version="4.6.0" />    

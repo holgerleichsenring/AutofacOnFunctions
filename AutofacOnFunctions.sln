@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacOnFunctions.Core", "AutofacOnFunctions.Core\AutofacOnFunctions.Core.csproj", "{94A477CA-FFCE-4AF4-B74E-C7C8F3E52B20}"
 EndProject

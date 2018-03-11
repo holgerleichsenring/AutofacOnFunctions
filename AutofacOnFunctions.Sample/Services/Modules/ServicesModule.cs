@@ -7,7 +7,7 @@ namespace AutofacOnFunctions.Sample.Services.Modules
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<TestIt>();
+            builder.RegisterType<TestIt>().As<ITestIt>();
         }
     }
 }

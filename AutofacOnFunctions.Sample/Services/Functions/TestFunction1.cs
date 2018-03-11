@@ -15,7 +15,7 @@ namespace AutofacOnFunctions.Sample.Services.Functions
         public static async Task<HttpResponseMessage> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req, 
             TraceWriter log,
-            [Inject]  TestIt testit)
+            [Inject]  ITestIt testit)
         {
             log.Info("C# HTTP trigger function processed a request.");
 

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AutofacOnFunctions</id>
+    <version>0.1.5</version>
+    <title>AutofacOnFunctions</title>
+    <authors>Holger Leichsenring</authors>
+    <owners>Holger Leichsenring</owners>
+    <licenseUrl>https://github.com/holgerleichsenring/AutofacOnFunctions/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/holgerleichsenring/AutofacOnFunctions</projectUrl>
+    <iconUrl>https://github.com/holgerleichsenring/AutofacOnFunctions/blob/master/icon64x64.png?raw=true</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AutofacOnFunctions let you easily use the brilliant Autofac capabilities in Azure Functions V2</description>
+    <releaseNotes>First version</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>Azure Functions AzureFunctions Autofac DependencyInjection</tags>
+	<dependencies>
+		<group targetFramework="netstandard">
+			<dependency id="Microsoft.NET.Sdk.Functions" version="1.0.13" />
+			<dependency id="Autofac" version="4.0.0" />
+		</group>
+	</dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\bin\AutofacOnFunctions.dll" target="lib\netstandard2.0\AutofacOnFunctions.dll" />
+</files>
+</package>

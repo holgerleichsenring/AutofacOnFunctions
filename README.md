@@ -1,7 +1,12 @@
 # Autofac On Functions
 Azure Function Autofac Integration
 
-For a comprehensive explanation have a look at [codingsoul](http://codingsoul.de/2018/01/19/azure-function-dependency-injection-with-autofac/)
+For a comprehensive explanation have a look at [codingsoul: azure functions dependency injection with autofac](http://codingsoul.de/2018/01/19/azure-function-dependency-injection-with-autofac/)
+There are two samples available:
+Azure Functions V1 with .net framework.
+Azure Functions V2 with dot net standard.
+
+The procedure is identical in both scenarios.
 
 # Goal
 Azure functions are by design static. Allow for dependency injection within Azure function with Autofac. The extensible nature of Azure Functions allow for attribute based dependency injection implementation. The attribute is called "Inject". Just add it as a parameter to your function combined with the type and name of the service parameter.

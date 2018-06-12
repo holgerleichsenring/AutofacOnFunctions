@@ -2,9 +2,10 @@
 Azure Function Autofac Integration
 
 For a comprehensive explanation have a look at [codingsoul: azure functions dependency injection with autofac](http://codingsoul.de/2018/01/19/azure-function-dependency-injection-with-autofac/)
+
 There are two samples available:
-Azure Functions V1 with .net framework.
-Azure Functions V2 with dot net standard.
+- Azure Functions V1 with .net framework.
+- Azure Functions V2 with dot net standard.
 
 The procedure is identical in both scenarios.
 

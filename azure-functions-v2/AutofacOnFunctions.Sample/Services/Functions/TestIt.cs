@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AutofacOnFunctions.Sample.Services.Functions
+﻿namespace AutofacOnFunctions.Sample.Services.Functions
 {
     public class TestIt : ITestIt
     {
@@ -10,11 +8,5 @@ namespace AutofacOnFunctions.Sample.Services.Functions
         {
             return "Dependency Injection Test method had been called.";
         }
-    }
-
-    public interface ITestIt
-    {
-        string Name { get; set; }
-        string CallMe();
     }
 }

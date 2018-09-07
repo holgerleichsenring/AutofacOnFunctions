@@ -56,7 +56,9 @@ The module(s) in question shall contain the services that are necessary for the 
 
 The bootstrapper implementations will be read and autofac will be configured when the first function that uses the Inject attribute is called or triggered. 
 
-Internally the implementation uses a ServiceLocator. When you need to inject services on the fly, avoid using a direct reference to that static class. IObjectResolver implementation can be injected that avoids this anti-pattern.
+# Breaking Changes
+
+As version 1.0.19 of Azure Functions made changes to the procedure of initialization necessary, the former used ServiceLocator is not available anymore. Anyway you should not use a direct reference to an Autofac IContainer reference anyway. If you need to resolve services on the fly, just inject IObjectResolver to your class.
 
 
 

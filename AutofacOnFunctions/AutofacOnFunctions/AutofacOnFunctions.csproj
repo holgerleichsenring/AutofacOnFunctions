@@ -8,8 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Contracts\**" />
     <Compile Remove="Images\**" />
+    <EmbeddedResource Remove="Contracts\**" />
     <EmbeddedResource Remove="Images\**" />
+    <None Remove="Contracts\**" />
     <None Remove="Images\**" />
   </ItemGroup>
 
@@ -19,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\" />
     <Folder Include="..\..\..\..\..\%2540samples\holgerleichsenring\autofac-on-functions\AutofacOnFunctions\AutofacOnFunctions\Services\Ioc\Provider\Binding\" />
     <Folder Include="..\..\..\..\..\%2540samples\holgerleichsenring\autofac-on-functions\AutofacOnFunctions\AutofacOnFunctions\Services\Ioc\Provider\Config\" />
   </ItemGroup>

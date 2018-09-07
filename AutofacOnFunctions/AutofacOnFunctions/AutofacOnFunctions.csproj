@@ -8,18 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Contracts\**" />
     <Compile Remove="Images\**" />
+    <EmbeddedResource Remove="Contracts\**" />
     <EmbeddedResource Remove="Images\**" />
+    <None Remove="Contracts\**" />
     <None Remove="Images\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.0.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.13" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Contracts\" />
   </ItemGroup>
 
 </Project>

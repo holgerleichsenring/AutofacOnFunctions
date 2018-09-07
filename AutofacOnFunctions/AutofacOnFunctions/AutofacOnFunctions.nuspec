@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AutofacOnFunctions</id>
-    <version>0.1.5</version>
+    <version>0.1.6</version>
     <title>AutofacOnFunctions</title>
     <authors>Holger Leichsenring</authors>
     <owners>Holger Leichsenring</owners>
@@ -16,7 +16,7 @@
     <tags>Azure Functions AzureFunctions Autofac DependencyInjection</tags>
 	<dependencies>
 		<group targetFramework="netstandard">
-			<dependency id="Microsoft.NET.Sdk.Functions" version="1.0.13" />
+			<dependency id="Microsoft.NET.Sdk.Functions" version="(1.0.13,10.1.18)" />
 			<dependency id="Autofac" version="4.0.0" />
 		</group>
 	</dependencies>

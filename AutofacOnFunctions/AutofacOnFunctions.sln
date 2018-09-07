@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacOnFunctions", "AutofacOnFunctions\AutofacOnFunctions.csproj", "{114CF4C9-D429-4882-9E0F-77670FC89013}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacOnFunctions.Sample", "AutofacOnFunctions.Sample\AutofacOnFunctions.Sample.csproj", "{B86A2089-82BC-4108-A56E-F0985D5A935D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +17,10 @@ Global
 		{114CF4C9-D429-4882-9E0F-77670FC89013}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{114CF4C9-D429-4882-9E0F-77670FC89013}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{114CF4C9-D429-4882-9E0F-77670FC89013}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC9B87FA-73B7-428F-AA32-999DA8866CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC9B87FA-73B7-428F-AA32-999DA8866CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC9B87FA-73B7-428F-AA32-999DA8866CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC9B87FA-73B7-428F-AA32-999DA8866CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B86A2089-82BC-4108-A56E-F0985D5A935D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B86A2089-82BC-4108-A56E-F0985D5A935D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B86A2089-82BC-4108-A56E-F0985D5A935D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B86A2089-82BC-4108-A56E-F0985D5A935D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

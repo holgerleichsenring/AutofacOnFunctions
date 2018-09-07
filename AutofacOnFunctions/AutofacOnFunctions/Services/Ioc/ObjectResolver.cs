@@ -7,6 +7,12 @@ namespace AutofacOnFunctions.Services.Ioc
 {
     public class ObjectResolver : IObjectResolver
     {
+        private readonly ILifetimeScope _lifetimeScope;
+
+        public ObjectResolver(ILifetimeScope lifetimeScope)
+        {
+            _lifetimeScope = lifetimeScope;
+        }
         /// <summary>
         ///     Creates the specified class instance. Uses ctor injection to populate the dependencies.
         /// </summary>
@@ -15,7 +21,7 @@ namespace AutofacOnFunctions.Services.Ioc
         /// <returns>instance of T</returns>
         public T Resolve<T>(IEnumerable<Parameter> arguments)
         {
-            return ServiceLocator.Instance.Resolve<T>(arguments);
+            return _lifetimeScope.Resolve<T>(arguments);
         }
 
         /// <summary>
@@ -25,7 +31,7 @@ namespace AutofacOnFunctions.Services.Ioc
         /// <returns>instance of T</returns>
         public T Resolve<T>()
         {
-            return ServiceLocator.Instance.Resolve<T>();
+            return _lifetimeScope.Resolve<T>();
         }
 
         /// <summary>
@@ -35,7 +41,7 @@ namespace AutofacOnFunctions.Services.Ioc
         /// <returns>instance of specified type</returns>
         public object Resolve(Type service)
         {
-            return ServiceLocator.Instance.Resolve(service);
+            return _lifetimeScope.Resolve(service);
         }
     }
 }

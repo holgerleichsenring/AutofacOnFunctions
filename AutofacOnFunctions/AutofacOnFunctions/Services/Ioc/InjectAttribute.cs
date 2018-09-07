@@ -5,7 +5,7 @@ namespace AutofacOnFunctions.Services.Ioc
 {
     [AttributeUsage(AttributeTargets.Parameter)]
     [Binding]
-    public class InjectAttribute : Attribute
+    public class InjectAttribute : System.Attribute
     {
     }
 }

@@ -1,12 +1,22 @@
 ﻿using System;
 using System.Reflection;
 using System.Threading.Tasks;
+using Autofac;
+using AutofacOnFunctions.Services.Ioc;
+using AutofacOnFunctions.Services.Ioc.Provider.Binding;
 using Microsoft.Azure.WebJobs.Host.Bindings;
 
-namespace AutofacOnFunctions.Services.Ioc
+namespace AutofacOnFunctions.Services.Ioc.Provider.Binding
 {
     public class InjectAttributeBindingProvider : IBindingProvider
     {
+        private readonly ContainerInitializer _containerInitializer;
+
+        public InjectAttributeBindingProvider()
+        {
+            _containerInitializer = new ContainerInitializer();
+        }
+
         public Task<IBinding> TryCreateAsync(BindingProviderContext context)
         {
             if (context == null)
@@ -21,7 +31,8 @@ namespace AutofacOnFunctions.Services.Ioc
                 return Task.FromResult<IBinding>(null);
             }
 
-            var objectResolver = ServiceLocator.Resolve<IObjectResolver>();
+            var container = _containerInitializer.GetOrCreateContainer();
+            var objectResolver = container.Resolve<IObjectResolver>();
             return Task.FromResult<IBinding>(new InjectAttributeBinding(parameterInfo, objectResolver));
         }
     }

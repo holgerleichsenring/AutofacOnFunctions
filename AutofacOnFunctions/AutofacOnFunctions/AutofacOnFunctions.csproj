@@ -15,11 +15,13 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.0.0" />
-    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.13" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.19" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Contracts\" />
+    <Folder Include="..\..\..\..\..\%2540samples\holgerleichsenring\autofac-on-functions\AutofacOnFunctions\AutofacOnFunctions\Services\Ioc\Provider\Binding\" />
+    <Folder Include="..\..\..\..\..\%2540samples\holgerleichsenring\autofac-on-functions\AutofacOnFunctions\AutofacOnFunctions\Services\Ioc\Provider\Config\" />
   </ItemGroup>
 
 </Project>

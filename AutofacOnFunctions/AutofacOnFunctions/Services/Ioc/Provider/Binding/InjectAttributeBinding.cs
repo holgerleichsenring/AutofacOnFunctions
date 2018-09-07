@@ -1,9 +1,10 @@
 ﻿using System.Reflection;
 using System.Threading.Tasks;
+using AutofacOnFunctions.Services.Ioc.Provider.Value;
 using Microsoft.Azure.WebJobs.Host.Bindings;
 using Microsoft.Azure.WebJobs.Host.Protocols;
 
-namespace AutofacOnFunctions.Services.Ioc
+namespace AutofacOnFunctions.Services.Ioc.Provider.Binding
 {
     public class InjectAttributeBinding : IBinding
     {

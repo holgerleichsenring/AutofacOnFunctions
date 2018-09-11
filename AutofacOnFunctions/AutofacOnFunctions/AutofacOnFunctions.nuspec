@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AutofacOnFunctions</id>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
     <title>AutofacOnFunctions</title>
     <authors>Holger Leichsenring</authors>
     <owners>Holger Leichsenring</owners>
@@ -11,7 +11,7 @@
     <iconUrl>https://github.com/holgerleichsenring/AutofacOnFunctions/blob/master/icon64x64.png?raw=true</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>AutofacOnFunctions let you easily use the brilliant Autofac capabilities in Azure Functions V2</description>
-    <releaseNotes>Adopted breaking changes from azure functions version 1.0.19</releaseNotes>
+    <releaseNotes>Added support for autofac's named services</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>Azure Functions AzureFunctions Autofac DependencyInjection</tags>
 	<dependencies>

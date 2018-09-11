@@ -5,10 +5,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.0.0" />
+    <PackageReference Include="AutofacOnFunctions" Version="0.3.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.19" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AutofacOnFunctions\AutofacOnFunctions.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

@@ -18,7 +18,13 @@ namespace AutofacOnFunctions.Services.Ioc.Provider.Value
 
         public Task<object> GetValueAsync()
         {
-            return Task.FromResult(_objectResolver.Resolve(Type));
+            var injectAttribute = _parameterInfo.GetCustomAttribute<InjectAttribute>();
+            if (!injectAttribute.HasName)
+            {
+                return Task.FromResult(_objectResolver.Resolve(Type));
+            }
+            return Task.FromResult(_objectResolver.Resolve(Type, injectAttribute.Name));
+
         }
 
         public string ToInvokeString()

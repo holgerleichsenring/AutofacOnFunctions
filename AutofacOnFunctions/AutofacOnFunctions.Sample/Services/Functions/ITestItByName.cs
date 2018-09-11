@@ -1,6 +1,6 @@
 ﻿namespace AutofacOnFunctions.Sample.Services.Functions
 {
-    public interface ITestIt
+    public interface ITestItByName
     {
         string CallMe();
     }

@@ -7,5 +7,16 @@ namespace AutofacOnFunctions.Services.Ioc
     [Binding]
     public class InjectAttribute : System.Attribute
     {
+        public string Name { get; set; }
+        public bool HasName => !string.IsNullOrWhiteSpace(Name);
+
+        public InjectAttribute()
+        {
+
+        }
+        public InjectAttribute(string name)
+        {
+            Name = name;
+        }
     }
 }

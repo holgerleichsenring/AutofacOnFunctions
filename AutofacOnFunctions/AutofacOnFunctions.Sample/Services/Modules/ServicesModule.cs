@@ -8,6 +8,9 @@ namespace AutofacOnFunctions.Sample.Services.Modules
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<TestIt>().As<ITestIt>();
+
+            builder.RegisterType<TestItByName>().Named<ITestItByName>("registration1");
+            builder.RegisterType<TestItByName>().Named<ITestItByName>("registration2");
         }
     }
 }

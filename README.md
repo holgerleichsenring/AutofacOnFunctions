@@ -1,18 +1,18 @@
 # Autofac On Functions
-Azure Function Autofac Integration
+Azure Function Autofac Integration, now version 1 available in nuget!
 
 For a comprehensive explanation have a look at 
 
 - [codingsoul: azure functions dependency injection with autofac](http://codingsoul.de/2018/01/19/azure-function-dependency-injection-with-autofac/)
 - [codingsoul: azure functions dependency injection with autofac nuget package](http://codingsoul.de/2018/06/12/azure-functions-dependency-injection-autofac-on-functions-nuget-package/)
+- [codingsoul: named services, fixes for breaking changes](http://codingsoul.de/2018/09/11/autofaconfunctions-named-services-support-fixes-for-breaking-changes/)
+- [codingsoul: autofaconfunctions version 1 released](http://codingsoul.de/2018/09/24/autofaconfunctions-version-1-released/)
 
-Actually the current library and the nuget package only work on .net core. .net Framework support for Azure Functions version since 1.0.19 will follow.
+# Environment
+Current library supports net framework and net standard since Microsoft.Net.Sdk.Functions version 1.0.21. For that version Azure Functions V2 is necessary. If you want to work with former version of the sdk, have a look onto the [archive](https://github.com/holgerleichsenring/AutofacOnFunctions/tree/master/archive/).
 
-In sources there are two samples available that you can just use, when you don't want to use the nuget package or you want to work with the old V1 version of Azure Functions:
-- Azure Functions V1 with .net framework.
-- Azure Functions V2 with dot net standard.
-
-It doesn't matter which sample, the procedure how to use dependency injection is identical.
+# Paradigm
+It doesn't matter with version of dotnet is going to be used, dependency injection paradigm is done completely identical. The code probably need some different references for implementing the function itself due to microsoft.net.sdk.functions implementation in certain versions.
 
 # Goal
 Azure functions are by design static. Allow for dependency injection within Azure function with Autofac. The extensible nature of Azure Functions allow for attribute based dependency injection implementation. The attribute is called "Inject". Just add it as a parameter to your function combined with the type and name of the service parameter.
@@ -63,7 +63,12 @@ The bootstrapper implementations will be read and autofac will be configured whe
 
 # Breaking Changes
 
+## Microsoft.net.sdk.function version 1.0.19
 As version 1.0.19 of Azure Functions made changes to the procedure of initialization necessary, the former used ServiceLocator is not available anymore. Anyway you should not use a direct reference to an Autofac IContainer reference anyway. If you need to resolve services on the fly, just inject IObjectResolver to your class.
+
+## Microsoft.net.sdk.function version 1.0.21
+Version 1.0.19 references WebJobs  Azure Functions made changes to the procedure of initialization necessary, the former used ServiceLocator is not available anymore. Anyway you should not use a direct reference to an Autofac IContainer reference anyway. If you need to resolve services on the fly, just inject IObjectResolver to your class.
+
 
 # Named Services
 Autofac allows for named services. AutofacOnFunctions had been enhanced to support named services in most initutive way. Actually there are only two steps to do.
@@ -98,5 +103,8 @@ public static class Function2
     }
 ```
 
-Full sample is available [AutofacOnFunctions Sample](https://github.com/holgerleichsenring/AutofacOnFunctions/tree/master/AutofacOnFunctions/AutofacOnFunctions.Sample)
+Full sample is available 
+
+- [net standard](https://github.com/holgerleichsenring/AutofacOnFunctions/tree/master/AutofacOnFunctions/AutofacOnFunctions.Samples.NetStandard)
+- [net framework](https://github.com/holgerleichsenring/AutofacOnFunctions/tree/master/AutofacOnFunctions/AutofacOnFunctions.Samples.NetFramework)
 

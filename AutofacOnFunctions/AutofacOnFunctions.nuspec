@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AutofacOnFunctions</id>
+    <version>1.0.2</version>
+    <title>AutofacOnFunctions</title>
+    <authors>Holger Leichsenring</authors>
+    <owners>Holger Leichsenring</owners>
+    <licenseUrl>https://github.com/holgerleichsenring/AutofacOnFunctions/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/holgerleichsenring/AutofacOnFunctions</projectUrl>
+    <iconUrl>https://github.com/holgerleichsenring/AutofacOnFunctions/blob/master/icon64x64.png?raw=true</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AutofacOnFunctions let you easily use the brilliant Autofac capabilities in Azure Functions V2</description>
+    <releaseNotes>Refactoring to support different Microsoft.NET.Sdk.Functions versions</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>Azure Functions AzureFunctions Autofac DependencyInjection</tags>
+	<dependencies>
+		<group targetFramework="netstandard2.0">
+			<dependency id="Microsoft.CSharp" version="4.5.0" />
+		  <dependency id="Microsoft.Azure.WebJobs" version="3.0.0-rc1" />
+			<dependency id="Autofac" version="4.0.0" />
+		</group>
+	  <group targetFramework="net46">
+	    <dependency id="Microsoft.CSharp" version="4.5.0" />
+	    <dependency id="Microsoft.Azure.WebJobs" version="2.2.0" />
+	    <dependency id="Autofac" version="4.0.0" />
+	  </group>
+	</dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\AutofacOnFunctions.dll" target="lib\netstandard2.0\AutofacOnFunctions.dll"  />
+    <file src="bin\Release\net46\AutofacOnFunctions.dll" target="lib\net46\AutofacOnFunctions.dll"  />
+</files>
+</package>

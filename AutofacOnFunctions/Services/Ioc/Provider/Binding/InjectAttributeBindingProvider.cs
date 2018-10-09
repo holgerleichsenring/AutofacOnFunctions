@@ -2,9 +2,8 @@
 using System.Reflection;
 using System.Threading.Tasks;
 using Autofac;
-using AutofacOnFunctions.Services.Ioc;
-using AutofacOnFunctions.Services.Ioc.Provider.Binding;
 using Microsoft.Azure.WebJobs.Host.Bindings;
+using Microsoft.Extensions.Logging;
 
 namespace AutofacOnFunctions.Services.Ioc.Provider.Binding
 {
@@ -12,9 +11,9 @@ namespace AutofacOnFunctions.Services.Ioc.Provider.Binding
     {
         private readonly ContainerInitializer _containerInitializer;
 
-        public InjectAttributeBindingProvider()
+        public InjectAttributeBindingProvider(ILoggerFactory loggerFactory)
         {
-            _containerInitializer = new ContainerInitializer();
+            _containerInitializer = new ContainerInitializer(loggerFactory);
         }
 
         public Task<IBinding> TryCreateAsync(BindingProviderContext context)

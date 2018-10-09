@@ -98,5 +98,7 @@ public static class Function2
     }
 ```
 
-Full sample is available [AutofacOnFunctions Sample](https://github.com/holgerleichsenring/AutofacOnFunctions/tree/master/AutofacOnFunctions/AutofacOnFunctions.Sample)
+Full sample is available
+[AutofacOnFunctions net framework sample](https://github.com/holgerleichsenring/AutofacOnFunctions/tree/master/AutofacOnFunctions/AutofacOnFunctions.Samples.NetFramework)
+[AutofacOnFunctions net standard sample](https://github.com/holgerleichsenring/AutofacOnFunctions/tree/master/AutofacOnFunctions/AutofacOnFunctions.Samples.NetStandard)
 

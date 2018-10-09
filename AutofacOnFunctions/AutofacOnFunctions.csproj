@@ -3,6 +3,14 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net46</TargetFrameworks>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Holger Leichsenring</Authors>
+    <Company />
+    <Product />
+    <Description>AutofacOnFunctions let you easily use the brilliant Autofac capabilities in Azure Functions V2</Description>
+    <Copyright>2018</Copyright>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
+    <Version>1.0.3</Version>
   </PropertyGroup>
   
   <ItemGroup Condition="'$(TargetFramework)'=='net46'">

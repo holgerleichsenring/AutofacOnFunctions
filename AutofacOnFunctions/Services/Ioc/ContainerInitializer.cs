@@ -1,15 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using Autofac;
-using AutofacOnFunctions.Exceptions;
-using AutofacOnFunctions.Services.Modules;
+using Microsoft.Extensions.Logging;
 
 namespace AutofacOnFunctions.Services.Ioc
 {
     public class ContainerInitializer
     {
+        private readonly ILoggerFactory _loggerFactory;
         private IContainer _container;
+
+        public ContainerInitializer(ILoggerFactory loggerFactory)
+        {
+            _loggerFactory = loggerFactory;
+        }
 
         public IContainer GetOrCreateContainer()
         {
@@ -23,10 +26,17 @@ namespace AutofacOnFunctions.Services.Ioc
 
         private void InitializeContainer()
         {
-            var modules = GetModules();
-            var containerBuilder = EnsureCommonModule(modules);
+            var moduleCollector = new ModuleCollector();
+            var containerBuilder = new ContainerBuilder();
+            var modules = moduleCollector.Collect();
             RegisterModules(modules, containerBuilder);
+            RegisterLoggingFactory(_loggerFactory, containerBuilder);
             _container = containerBuilder.Build();
+        }
+
+        private void RegisterLoggingFactory(ILoggerFactory loggerFactory, ContainerBuilder containerBuilder)
+        {
+            containerBuilder.RegisterInstance(loggerFactory);
         }
 
         private static void RegisterModules(List<Module> modules, ContainerBuilder containerBuilder)
@@ -35,37 +45,6 @@ namespace AutofacOnFunctions.Services.Ioc
             {
                 containerBuilder.RegisterModule(module);
             }
-        }
-
-        private static ContainerBuilder EnsureCommonModule(List<Module> modules)
-        {
-            var containerBuilder = new ContainerBuilder();
-            if (modules.All(module => module.GetType().FullName != typeof(CommonModule).FullName))
-            {
-                modules.Add(new CommonModule());
-            }
-
-            return containerBuilder;
-        }
-
-        private static List<Module> GetModules()
-        {
-            var bootstrapperCollector = new BootstrapperCollector();
-            var bootstrappers = bootstrapperCollector.GetBootstrappers();
-
-            if (bootstrappers.Count == 0)
-            {
-                throw new BootstrapperNotFoundException("No bootstrapper instances had been recognized.");
-            }
-
-            var modules = new List<Module>();
-            foreach (var bootstrapper in bootstrappers)
-            {
-                var instance = (IBootstrapper) Activator.CreateInstance(bootstrapper);
-                modules.AddRange(instance.CreateModules());
-            }
-
-            return modules;
         }
     }
 }

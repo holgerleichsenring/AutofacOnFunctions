@@ -4,7 +4,7 @@
     <AzureFunctionsVersion>v1</AzureFunctionsVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AutofacOnFunctions" Version="1.0.4" />
+    <PackageReference Include="AutofacOnFunctions" Version="1.0.11" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.14" />
   </ItemGroup>
   <ItemGroup>

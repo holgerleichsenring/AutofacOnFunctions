@@ -4,11 +4,8 @@
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="4.8.0" />
+    <PackageReference Include="AutofacOnFunctions" Version="1.0.14" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.23" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AutofacOnFunctions\AutofacOnFunctions.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">

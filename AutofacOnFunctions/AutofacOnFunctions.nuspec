@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AutofacOnFunctions</id>
-    <version>1.0.11</version>
+    <version>1.0.14</version>
     <title>AutofacOnFunctions</title>
     <authors>Holger Leichsenring</authors>
     <owners>Holger Leichsenring</owners>
@@ -11,13 +11,13 @@
     <iconUrl>https://github.com/holgerleichsenring/AutofacOnFunctions/blob/master/icon64x64.png?raw=true</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>AutofacOnFunctions let you easily use the brilliant Autofac capabilities in Azure Functions V2</description>
-    <releaseNotes>Added logging capabilities</releaseNotes>
+    <releaseNotes>Solved Azure Function assembly reference issues described in https://github.com/Azure/azure-functions-host/issues/992 </releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>Azure Functions AzureFunctions Autofac DependencyInjection</tags>
 	<dependencies>
 		<group targetFramework="netstandard2.0">
 			<dependency id="Microsoft.CSharp" version="4.5.0" />
-		  <dependency id="Microsoft.Azure.WebJobs" version="3.0.0-rc1" />
+		  <dependency id="Microsoft.Azure.WebJobs" version="3.0.0" />
 			<dependency id="Autofac" version="4.0.0" />
 		</group>
 	  <group targetFramework="net46">

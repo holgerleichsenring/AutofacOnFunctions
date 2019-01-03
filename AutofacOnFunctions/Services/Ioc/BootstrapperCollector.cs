@@ -17,5 +17,13 @@ namespace AutofacOnFunctions.Services.Ioc
                 .SelectMany(x => x.GetTypes())
                 .Where(x => typeof(IBootstrapper).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract).ToList();
         }
+
+        public List<Type> GetBootstrappers(string bootstrappingAssembly)
+        {   
+            return AppDomain.CurrentDomain.GetAssemblies()
+                .Where(x => x.GetName().Name.StartsWith(bootstrappingAssembly))
+                .SelectMany(x => x.GetTypes())
+                .Where(x => typeof(IBootstrapper).IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract).ToList();
+        }
     }
 }

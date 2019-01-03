@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Autofac;
 using AutofacOnFunctions.Exceptions;
 using AutofacOnFunctions.Services.Modules;
@@ -9,21 +8,29 @@ namespace AutofacOnFunctions.Services.Ioc
 {
     public class ModuleCollector
     {
-        public List<Module> Collect()
+        private readonly string _bootstrappingAssembly;
+
+        public ModuleCollector(string bootstrappingAssembly)
         {
+            _bootstrappingAssembly = bootstrappingAssembly;
+        }
+
+        public List<Module> Collect()
+        {   
             var modules = new List<Module>
             {
                 new CommonModule(),
                 new LoggingModule()
             };
-            modules.AddRange(GetModules());
+            modules.AddRange(GetModules(_bootstrappingAssembly));
             return modules;
         }
 
-        private static List<Module> GetModules()
+        private static List<Module> GetModules(string bootstrappingAssembly)
         {
+            var isBootstrappingAssemblyPresent = !string.IsNullOrWhiteSpace(bootstrappingAssembly);
             var bootstrapperCollector = new BootstrapperCollector();
-            var bootstrappers = bootstrapperCollector.GetBootstrappers();
+            var bootstrappers = isBootstrappingAssemblyPresent ? bootstrapperCollector.GetBootstrappers(bootstrappingAssembly) : bootstrapperCollector.GetBootstrappers();
 
             if (bootstrappers.Count == 0)
             {

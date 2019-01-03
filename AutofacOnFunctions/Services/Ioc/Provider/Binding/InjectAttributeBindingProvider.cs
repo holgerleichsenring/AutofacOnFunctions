@@ -17,7 +17,7 @@ namespace AutofacOnFunctions.Services.Ioc.Provider.Binding
         }
 
         public Task<IBinding> TryCreateAsync(BindingProviderContext context)
-        {
+        {   
             if (context == null)
             {
                 throw new ArgumentNullException(nameof(context));
@@ -30,6 +30,8 @@ namespace AutofacOnFunctions.Services.Ioc.Provider.Binding
                 return Task.FromResult<IBinding>(null);
             }
 
+            if (injectAttribute.HasBootstrappingAssembly)
+                _containerInitializer.SetBoostrappingAssembly(injectAttribute.BootstrappingAssembly);
             var container = _containerInitializer.GetOrCreateContainer();
             var objectResolver = container.Resolve<IObjectResolver>();
             return Task.FromResult<IBinding>(new InjectAttributeBinding(parameterInfo, objectResolver));

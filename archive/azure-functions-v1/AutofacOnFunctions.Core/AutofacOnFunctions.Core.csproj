@@ -2,7 +2,15 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <Version>0.1.0</Version>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
   <ItemGroup>    
     <PackageReference Include="Autofac" Version="4.6.0" />    
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.7" />

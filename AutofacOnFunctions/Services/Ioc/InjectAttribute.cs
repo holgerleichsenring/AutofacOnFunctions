@@ -10,13 +10,22 @@ namespace AutofacOnFunctions.Services.Ioc
         public string Name { get; set; }
         public bool HasName => !string.IsNullOrWhiteSpace(Name);
 
-        public InjectAttribute()
-        {
+        public string BootstrappingAssembly { get; set; }
+        public bool HasBootstrappingAssembly => !string.IsNullOrWhiteSpace(BootstrappingAssembly);
 
-        }
-        public InjectAttribute(string name)
+        public InjectAttribute() { }
+
+        public InjectAttribute(string name, string bootstrappingAssembly = "")
         {
             Name = name;
+            BootstrappingAssembly = bootstrappingAssembly;
         }
+
+        public InjectAttribute(string bootstrappingAssembly, bool useBoostrappingAssembly)
+        {
+            BootstrappingAssembly = bootstrappingAssembly;
+        }
+
+        
     }
 }

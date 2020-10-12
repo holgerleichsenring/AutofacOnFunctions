@@ -8,6 +8,12 @@ namespace AutofacOnFunctions.Services.Ioc
     {
         private readonly ILoggerFactory _loggerFactory;
         private IContainer _container;
+        private string _bootstrappingAssembly = null;
+
+        public void SetBoostrappingAssembly(string bootstrappingAssembly)
+        {
+            _bootstrappingAssembly = bootstrappingAssembly;
+        }
 
         public ContainerInitializer(ILoggerFactory loggerFactory)
         {
@@ -26,7 +32,7 @@ namespace AutofacOnFunctions.Services.Ioc
 
         private void InitializeContainer()
         {
-            var moduleCollector = new ModuleCollector();
+            var moduleCollector = new ModuleCollector(_bootstrappingAssembly);
             var containerBuilder = new ContainerBuilder();
             var modules = moduleCollector.Collect();
             RegisterModules(modules, containerBuilder);
